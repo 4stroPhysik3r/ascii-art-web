@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/static/main.js" defer></script>
+    <title>ASCII-ART-WEB</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+    <link rel="manifest" href="/static/site.webmanifest">
+</head>
+
+<body>
+    <h1>ASCII-ART-WEB</h1>
+    <div>
+        <form action="/result" method="POST">
+            <h2>Select your banner</h2>
+
+            <select required name="banner" class="selection">
+                <option value="standard" class="selection">STANDARD</option>
+                <option value="shadow" class="selection">SHADOW</option>
+                <option value="thinkertoy" class="selection">THINKERTOY</option>
+            </select>
+
+            <textarea value={{.TextValue}} placeholder="Type your text here" name="input" id="input" type="text"
+                class="input"></textarea>
+
+            <button formmethod="POST" type="submit" class="button glow-effect">GENERATE 👋<svg class="glow-container">
+                    <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+                    <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+                </svg></button>
+        </form>
+    </div>
+    <div>
+        <pre class="result">{{.TextValue}}<pre>
+    </div>
+</body>
+<footer class="footer">
+    <p>Made by
+        <a class="footer-link" href="https://github.com/4stroPhysik3r">4stroPhysik3r</a>
+    </p>
+</footer>
+
+</html>
