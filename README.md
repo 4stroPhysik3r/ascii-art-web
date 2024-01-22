@@ -1,4 +1,4 @@
-# _**Ascii-Art-Web - Stylize**_
+# Ascii-Art Web Interface
 
 ### Description
 
